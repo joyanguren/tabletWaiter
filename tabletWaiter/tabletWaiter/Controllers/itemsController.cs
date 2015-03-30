@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using tabletWaiter.Data;
+using tabletWaiter.Models;
 
 namespace tabletWaiter.Controllers
 {
@@ -30,6 +31,19 @@ namespace tabletWaiter.Controllers
             else
             {
                 return Request.CreateResponse(HttpStatusCode.OK, items);
+            }
+        }
+
+        [Route("add")]
+        public HttpResponseMessage addItem([FromBody] Item itemToAdd)
+        {
+            if (_repo.addItem(itemToAdd) && _repo.Save())
+            {
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.NoContent);
             }
         }
 

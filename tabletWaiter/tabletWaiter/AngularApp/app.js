@@ -3,6 +3,7 @@
 tabletWaiter.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', { templateUrl: 'AngularApp/Templates/index.html' })
+        .when('/addItem', { templateUrl: 'AngularApp/Templates/addItem.html' })
         .otherwise({ redirectTo: '/' });
 }]);
 

@@ -219,6 +219,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Items.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Data\ITabletWaiterRepository.cs" />
@@ -239,8 +240,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularApp\app.js" />
+    <Content Include="AngularApp\Controllers\addItemController.js" />
     <Content Include="AngularApp\Controllers\indexController.js" />
+    <Content Include="AngularApp\Language\esLanguage.js" />
     <Content Include="AngularApp\Services\dataService.js" />
+    <Content Include="AngularApp\Templates\addItem.html" />
     <Content Include="AngularApp\Templates\index.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />

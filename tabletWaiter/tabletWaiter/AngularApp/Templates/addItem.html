@@ -1,0 +1,18 @@
+﻿<div ng-controller="addItemController">
+    <h2>Añadir plato</h2>
+    <div class="inset">
+        <form>
+            <div>
+                <span><label>Nombre</label></span>
+                <span><input type="text" ng-model="itemName" class="textbox" id="active"></span>
+            </div>
+            <div>
+                <span><label>Descripción</label></span>
+                <span><textarea ng-model="itemDescription"></textarea></span>
+            </div>
+            <div>
+                <button ng-click="addItem()" class="btn btn-success btn-lg buttonBig">Añadir plato</button>
+            </div>
+        </form>
+    </div>
+</div>
