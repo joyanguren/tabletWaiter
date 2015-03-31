@@ -8,8 +8,9 @@ h4 {
   color: white;
 }
 #main {
-  margin-top: 50px;
   text-align: center;
+  width: 960px;
+  margin: 50px auto;
 }
 .buttonBig {
   height: 60px;
@@ -95,5 +96,37 @@ textarea {
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+/*itemList*/
+.loading {
+  margin-top: 80px;
+}
+.item {
+  border: 2px solid black;
+  background: white;
+  color: black;
+  text-align: left;
+  padding: 20px;
+  margin: 20px;
+}
+.item .name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #84C21C;
+  margin-bottom: 3px;
+}
+.item p {
+  margin-top: 10px;
+}
+.item .icons {
+  float: right;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.item .icons img {
+  width: 30px;
+}
+.item .icons img:hover {
+  opacity: 0.6;
 }
 /*# sourceMappingURL=tableWaiterStyles.css.map */

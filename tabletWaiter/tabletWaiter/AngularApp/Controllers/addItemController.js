@@ -4,7 +4,7 @@
 
     $scope.addItem = function () {
         dataService.addItem($scope.itemName, $scope.itemDescription).then(function (resutl) {
-            alert("item Registrado correctamente");
+            swal("Buen trabajo", "El elemento ha sido introducido correctamente", "success")
 
             $scope.itemName = "";
             $scope.itemDescription = "";

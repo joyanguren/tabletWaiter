@@ -8,8 +8,9 @@ h2, h3, h4 {
 }
 
 #main {
-    margin-top: 50px;
     text-align: center;
+    width: 960px;
+    margin: 50px auto;
 }
 
 .buttonBig {
@@ -111,4 +112,43 @@ input[type="text"], textarea {
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+}
+
+/*itemList*/
+.loading {
+    margin-top: 80px;
+}
+
+.item {
+    border: 2px solid black;
+    background: white;
+    color: black;
+    text-align: left;
+    padding: 20px;
+    margin: 20px;
+
+    .name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #84C21C;
+        margin-bottom: 3px;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    .icons {
+        float: right;
+        margin-top: 15px;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
 }

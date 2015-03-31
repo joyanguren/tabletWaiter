@@ -26,14 +26,12 @@ html, body { height:100%;}
 	header{
 		height:72px;
 		overflow:hidden;
-		background:url(../images/header-bg.gif) 0 0 repeat-x;
 	}
 	
 	/*Gallery*/
 	#gallery {
 		height:496px;
 		overflow:hidden;
-		background:url(../images/gallerry-bg.gif) 0 0 repeat-x;
 	}
 	
 	/* Content */
@@ -121,7 +119,6 @@ h1 {
 	line-height:1.2em;
 	color:#fff;
 	font-weight:normal;
-	background:url(../images/logo.jpg) no-repeat 0 0;
 	padding:6px 0 8px 60px;
 	position:absolute;
 	left:10px;
