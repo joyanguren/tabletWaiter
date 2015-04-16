@@ -20,6 +20,19 @@ namespace tabletWaiter.Data
             return _ctx.SaveChanges() > 0;
         }
 
+        public Models.Item GetItem(int itemId)
+        {
+            try
+            {
+                return _ctx.Items.Where(i => i.Id == itemId).First();
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return null;
+            }
+        }
+
         public IEnumerable<Models.Item> GetAllItems()
         {
             try
@@ -33,12 +46,42 @@ namespace tabletWaiter.Data
             }
         }
 
-
         public bool addItem(Models.Item itemToAdd)
         {
             try
             {
                 _ctx.Items.Add(itemToAdd);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return false;
+            }
+        }
+
+        public bool deleteItem(int itemId)
+        {
+            try
+            {
+                var item = _ctx.Items.Where(i => i.Id == itemId).First();
+                _ctx.Items.Remove(item);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return false;
+            }
+        }
+
+        public bool editItem(Models.Item itemToEdit)
+        {
+            try
+            {
+                var item = _ctx.Items.Where(i => i.Id == itemToEdit.Id).First();
+                item.Name = itemToEdit.Name;
+                item.Description = itemToEdit.Description;
                 return true;
             }
             catch (Exception ex)

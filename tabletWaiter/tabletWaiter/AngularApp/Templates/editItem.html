@@ -1,0 +1,18 @@
+﻿<div ng-controller="editItemController">
+    <h2>Editar plato</h2>
+    <div class="inset">
+        <form>
+            <div>
+                <span><label>Nombre</label></span>
+                <span><input type="text" ng-model="item.Name" class="textbox" id="active"></span>
+            </div>
+            <div>
+                <span><label>Descripción</label></span>
+                <span><textarea ng-model="item.Description"></textarea></span>
+            </div>
+            <div>
+                <button ng-click="editItem()" class="btn btn-success btn-lg buttonBig">Añadir plato</button>
+            </div>
+        </form>
+    </div>
+</div>

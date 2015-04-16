@@ -4,11 +4,15 @@
         <img src="../../Content/images/loading.gif" />
     </div>
 
+    <div class="noItems" ng-show="itemsCount == 0 && !loading">
+        No hay ningún elemento
+    </div>
+
     <div class="items" ng-hide="loading">
         <div class="item" ng-repeat="item in items">
             <div class="icons">
-                <img src="../../Content/icons/edit.png" />
-                <img src="../../Content/icons/delete.png" />
+                <img ng-click="editItem(item.Id)" src="../../Content/icons/edit.png" />
+                <img ng-click="deleteItem(item.Id)" src="../../Content/icons/delete.png" />
             </div>
             <span class="name">{{item.Name}}</span>
             <p>{{item.Description}}</p>

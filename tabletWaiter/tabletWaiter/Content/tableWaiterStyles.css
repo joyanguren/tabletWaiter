@@ -129,4 +129,9 @@ textarea {
 .item .icons img:hover {
   opacity: 0.6;
 }
+.noItems {
+  background: white;
+  color: black;
+  padding: 30px;
+}
 /*# sourceMappingURL=tableWaiterStyles.css.map */

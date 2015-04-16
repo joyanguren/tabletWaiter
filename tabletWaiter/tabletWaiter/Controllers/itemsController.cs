@@ -19,6 +19,22 @@ namespace tabletWaiter.Controllers
             _repo = repo;
         }
 
+        [Route("{itemId}")]
+        [HttpGet]
+        public HttpResponseMessage getItem(int itemId)
+        {
+            var item = _repo.GetItem(itemId);
+
+            if (item == null)
+            {
+                return Request.CreateResponse(HttpStatusCode.NoContent);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, item);
+            }
+        }
+
         [Route("all")]
         public HttpResponseMessage getAllItems()
         {
@@ -47,5 +63,32 @@ namespace tabletWaiter.Controllers
             }
         }
 
+        [Route("delete/{itemId}")]
+        [HttpDelete]
+        public HttpResponseMessage addItem(int itemId)
+        {
+            if (_repo.deleteItem(itemId) && _repo.Save())
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, itemId);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.NoContent);
+            }
+        }
+
+        [Route("edit")]
+        [HttpPost]
+        public HttpResponseMessage editItem([FromBody] Item itemToAdd)
+        {
+            if (_repo.editItem(itemToAdd) && _repo.Save())
+            {
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.NoContent);
+            }
+        }
     }
 }

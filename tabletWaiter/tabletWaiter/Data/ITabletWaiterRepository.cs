@@ -9,10 +9,16 @@ namespace tabletWaiter.Data
 {
     public interface ITabletWaiterRepository
     {
+        Item GetItem(int itemId);
+
         IEnumerable<Item> GetAllItems();
 
         bool addItem(Item itemToAdd);
 
         bool Save();
+
+        bool deleteItem(int itemId);
+
+        bool editItem(Item itemToAdd);
     }
 }
