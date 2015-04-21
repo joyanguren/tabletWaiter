@@ -1,7 +1,13 @@
 ﻿<div ng-controller="itemListController">
     <h2>Lista de items</h2>
+
     <div class="loading" ng-show="loading">
         <img src="../../Content/images/loading.gif" />
+    </div>
+
+    <div class="item" ng-hide="loading">
+        <span ng-repeat="category in categories" class="categoryFilter" ng-click="filterCategory(category.Id)">{{ category.Name }}</span>
+        <span class="categoryFilter" ng-click="filterCategory(-1)">Todos</span>
     </div>
 
     <div class="noItems" ng-show="itemsCount == 0 && !loading">
@@ -14,9 +20,9 @@
                 <img ng-click="editItem(item.Id)" src="../../Content/icons/edit.png" />
                 <img ng-click="deleteItem(item.Id)" src="../../Content/icons/delete.png" />
             </div>
+            <img ng-src="{{item.Image}}"/>
             <span class="name">{{item.Name}}</span>
             <p>{{item.Description}}</p>
-
         </div>
     </div>
 </div>

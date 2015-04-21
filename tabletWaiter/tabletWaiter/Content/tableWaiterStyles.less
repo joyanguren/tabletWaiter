@@ -75,6 +75,10 @@ h2, h3, h4 {
     -webkit-border-radius: 0.3em;
     width: 600px;
     margin: auto;
+
+    div {
+        margin: 20px 0;
+    }
 }
 
 form span {
@@ -126,6 +130,13 @@ input[type="text"], textarea {
     text-align: left;
     padding: 20px;
     margin: 20px;
+    overflow: hidden;
+
+    img {
+        float: left;
+        margin-right: 30px;
+        width: 300px;
+    }
 
     .name {
         font-size: 18px;
@@ -140,7 +151,7 @@ input[type="text"], textarea {
 
     .icons {
         float: right;
-        margin-top: 15px;
+        /*margin-top: 15px;*/
         cursor: pointer;
 
         img {
@@ -157,4 +168,51 @@ input[type="text"], textarea {
     background: white;
     color: black;
     padding: 30px;
+}
+
+.categoryFilter {
+    margin: 5px;
+    padding: 10px;
+    color: lightgray;
+    background-color: lightseagreen;
+}
+
+/*Categories*/
+.addCategory {
+    background: white;
+    border: 2px solid black;
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px;
+
+    img {
+        vertical-align: middle;
+        margin-right: 30px;
+        width: 40px;
+    }
+
+    span {
+        vertical-align: middle;
+    }
+}
+
+.addCategoryForm {
+    input {
+        width: 350px;
+    }
+}
+
+.categories {
+    color: black;
+
+    label {
+        margin: 5px;
+    }
+
+    div {
+        margin-left: 50px;
+        text-align: left;
+    }
 }

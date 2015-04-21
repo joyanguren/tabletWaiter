@@ -9,6 +9,7 @@ namespace tabletWaiter.Data
 {
     public interface ITabletWaiterRepository
     {
+        //ITEMS
         Item GetItem(int itemId);
 
         IEnumerable<Item> GetAllItems();
@@ -20,5 +21,12 @@ namespace tabletWaiter.Data
         bool deleteItem(int itemId);
 
         bool editItem(Item itemToAdd);
+
+        //CATEGORIES
+        bool CreateCategory(Category category);
+
+        List<Category> GetAllCategories();
+
+        bool deleteCategory(int categoryId);
     }
 }

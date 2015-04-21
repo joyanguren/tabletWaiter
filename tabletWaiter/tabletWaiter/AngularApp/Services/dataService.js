@@ -9,9 +9,11 @@
         return $http.get(url);
     };
 
-    var addItem = function (name, description) {
+    var addItem = function (name, categories, image, description) {
         var item = {
             name: name,
+            categories: categories,
+            image: image,
             description: description
         };
 
@@ -29,12 +31,34 @@
         return $http.post(url, item);
     };
 
+    var getCategories = function () {
+        var url = "/api/categories/all";
+        return $http.get(url);
+    };
+
+    var addCategory = function (categoryName) {
+        var category = {
+            name: categoryName,
+        };
+
+        var url = "/api/categories/add";
+        return $http.post(url, category);
+    };
+
+    var deleteCategory = function (itemId) {
+        var url = "/api/categories/delete/" + itemId;
+        return $http.delete(url);
+    };
+
     var service = {
         getItem: getItem,
         getAllItems: getAllItems,
         addItem: addItem,
         deleteItem: deleteItem,
-        editItem: editItem
+        editItem: editItem,
+        getCategories: getCategories,
+        addCategory: addCategory,
+        deleteCategory: deleteCategory
     };
 
     return service;

@@ -19,7 +19,8 @@ namespace tabletWaiter.Data
         {
             return _ctx.SaveChanges() > 0;
         }
-
+  
+        //ITEMS//
         public Models.Item GetItem(int itemId)
         {
             try
@@ -82,6 +83,49 @@ namespace tabletWaiter.Data
                 var item = _ctx.Items.Where(i => i.Id == itemToEdit.Id).First();
                 item.Name = itemToEdit.Name;
                 item.Description = itemToEdit.Description;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return false;
+            }
+        }
+
+        //CATEGORIES
+        public bool CreateCategory(Models.Category category)
+        {
+            try
+            {
+                _ctx.Categories.Add(category);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return false;
+            }
+        }
+
+        public List<Models.Category> GetAllCategories()
+        {
+            try
+            {
+                return _ctx.Categories.ToList();
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return null;
+            }
+        }
+
+        public bool deleteCategory(int categoryId)
+        {
+            try
+            {
+                var category = _ctx.Categories.Where(c => c.Id == categoryId).First();
+                _ctx.Categories.Remove(category);
                 return true;
             }
             catch (Exception ex)

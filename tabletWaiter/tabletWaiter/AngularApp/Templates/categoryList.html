@@ -1,0 +1,24 @@
+﻿<div ng-controller="categoryListController">
+    <h2>Categorías</h2>
+
+    <div class="loading" ng-show="loading">
+        <img src="../../Content/images/loading.gif" />
+    </div>
+
+    <div class="noItems" ng-show="itemsCount == 0 && !loading">
+        No hay ningún elemento
+    </div>
+
+    <div class="addCategory" ng-click="goTo('addCategory')" ng-show="!loading">
+        <img src="../../Content/icons/add.png" /> <span>Añadir categoría</span>
+    </div>
+
+    <div class="items" ng-hide="loading">
+        <div class="item" ng-repeat="category in categories">
+            <div class="icons">
+                <img ng-click="deleteCategory(category.Id)" src="../../Content/icons/delete.png" />
+            </div>
+            <span class="name">{{category.Name}}</span>
+        </div>
+    </div>
+</div>

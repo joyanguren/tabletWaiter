@@ -1,14 +1,36 @@
 ﻿<div ng-controller="addItemController">
     <h2>Añadir plato</h2>
-    <div class="inset">
+    <div class="inset addItemForm">
         <form>
             <div>
                 <span><label>Nombre</label></span>
                 <span><input type="text" ng-model="itemName" class="textbox" id="active"></span>
             </div>
+            <div class="categories">
+                <span><label>Categorías</label></span>
+                <div>
+                    <label ng-repeat="category in categories">
+                        <input type="checkbox" checklist-model="categoriesSelected" checklist-value="category.Id"> {{ category.Name }}
+                    </label>
+                </div>
+            </div>
+            <div>
+                <span><label>Imagen</label></span>
+                <input ng-hide="true" class="btn btn-file" type='file' id="myFileInput" ng-model="image" onchange="angular.element(this).scope().fileNameChanged(this)" />
+                <img ng-click="clickFileUpload()"src="../../Content/icons/addImage.png" />
+                <img id="preview" ng-src="{{dataImg}}" />
+            </div>
             <div>
                 <span><label>Descripción</label></span>
                 <span><textarea ng-model="itemDescription"></textarea></span>
+            </div>
+            <div>
+                <span><label>Precio</label></span>
+                <input type="number"/>
+            </div>
+            <div>
+                <span><label>Ingredientes</label></span>
+                <textarea></textarea>
             </div>
             <div>
                 <button ng-click="addItem()" class="btn btn-success btn-lg buttonBig">Añadir plato</button>

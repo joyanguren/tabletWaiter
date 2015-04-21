@@ -65,7 +65,7 @@ namespace tabletWaiter.Controllers
 
         [Route("delete/{itemId}")]
         [HttpDelete]
-        public HttpResponseMessage addItem(int itemId)
+        public HttpResponseMessage deleteItem(int itemId)
         {
             if (_repo.deleteItem(itemId) && _repo.Save())
             {
