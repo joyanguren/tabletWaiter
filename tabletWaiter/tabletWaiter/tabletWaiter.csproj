@@ -241,6 +241,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularApp\app.js" />
+    <Content Include="AngularApp\build.js" />
     <Content Include="AngularApp\Controllers\addCategoryController.js" />
     <Content Include="AngularApp\Controllers\categoryListController.js" />
     <Content Include="AngularApp\Controllers\editItemController.js" />
@@ -248,6 +249,7 @@
     <Content Include="AngularApp\Controllers\indexController.js" />
     <Content Include="AngularApp\Controllers\itemListController.js" />
     <Content Include="AngularApp\Language\esLanguage.js" />
+    <Content Include="AngularApp\services.js" />
     <Content Include="AngularApp\Services\dataService.js" />
     <Content Include="AngularApp\Templates\addCategory.html" />
     <Content Include="AngularApp\Templates\categoryList.html" />
@@ -292,6 +294,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="gruntfile.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -352,6 +355,7 @@
     <Content Include="Content\tableWaiterStyles.css.map">
       <DependentUpon>tableWaiterStyles.css</DependentUpon>
     </Content>
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
