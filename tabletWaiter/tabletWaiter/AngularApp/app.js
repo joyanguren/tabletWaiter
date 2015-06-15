@@ -1,5 +1,6 @@
 ﻿var tabletWaiter = angular.module('tabletWaiter', ['ngRoute', 'checklist-model']);
 
+
 tabletWaiter.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', { templateUrl: 'AngularApp/Templates/index.html' })
@@ -16,3 +17,4 @@ tabletWaiter.run(function () {
 
 });
 
+//Natch's comment
