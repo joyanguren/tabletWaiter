@@ -1,5 +1,6 @@
 ﻿var tabletWaiter = angular.module('tabletWaiter', ['ngRoute', 'checklist-model']);
 
+//jon comment
 
 tabletWaiter.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
