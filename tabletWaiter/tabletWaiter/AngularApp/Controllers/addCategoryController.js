@@ -8,4 +8,6 @@
             $scope.categoryName = "";
         });
     };
+
+    //comment
 }]);
