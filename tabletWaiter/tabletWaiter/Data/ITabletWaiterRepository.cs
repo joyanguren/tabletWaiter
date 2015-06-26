@@ -28,5 +28,7 @@ namespace tabletWaiter.Data
         List<Category> GetAllCategories();
 
         bool deleteCategory(int categoryId);
+
+        bool changeHiddenStatus(int itemId);
     }
 }

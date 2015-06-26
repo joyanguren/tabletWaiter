@@ -10,5 +10,6 @@ namespace tabletWaiter.Models
         public string Image { get; set; }
         public float Price { get; set; }
         public string Categories { get; set; }
+        public bool Hidden { get; set; }
     }
 }

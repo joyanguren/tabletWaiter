@@ -90,5 +90,20 @@ namespace tabletWaiter.Controllers
                 return Request.CreateResponse(HttpStatusCode.NoContent);
             }
         }
+
+
+        [Route("showItem/{itemId}")]
+        [HttpPost]
+        public HttpResponseMessage changeHiddenStatus(int itemId)
+        {
+            if (_repo.changeHiddenStatus(itemId) && _repo.Save())
+            {
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+        }
     }
 }

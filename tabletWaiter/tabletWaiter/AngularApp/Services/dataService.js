@@ -50,6 +50,11 @@
         return $http.delete(url);
     };
 
+    var changeHiddenStatus = function (itemId) {
+        var url = "/api/items/showItem/" + itemId;
+        return $http.post(url);
+        };
+
     var service = {
         getItem: getItem,
         getAllItems: getAllItems,
@@ -58,7 +63,8 @@
         editItem: editItem,
         getCategories: getCategories,
         addCategory: addCategory,
-        deleteCategory: deleteCategory
+        deleteCategory: deleteCategory,
+        changeHiddenStatus: changeHiddenStatus
     };
 
     return service;

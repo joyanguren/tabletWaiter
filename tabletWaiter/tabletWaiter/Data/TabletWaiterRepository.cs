@@ -19,7 +19,7 @@ namespace tabletWaiter.Data
         {
             return _ctx.SaveChanges() > 0;
         }
-  
+
         //ITEMS//
         public Models.Item GetItem(int itemId)
         {
@@ -129,6 +129,28 @@ namespace tabletWaiter.Data
             {
                 var category = _ctx.Categories.Where(c => c.Id == categoryId).First();
                 _ctx.Categories.Remove(category);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return false;
+            }
+        }
+
+
+        public bool changeHiddenStatus(int itemId)
+        {
+            try
+            {
+                var item = _ctx.Items.Where(c => c.Id == itemId).First();
+
+                if (item == null)
+                {
+                    return false;
+                }
+
+                item.Hidden = !item.Hidden;
                 return true;
             }
             catch (Exception ex)

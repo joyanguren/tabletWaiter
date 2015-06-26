@@ -63,6 +63,15 @@
         $scope.loading = false;
     };
 
+    $scope.showItem = function (itemId, index)
+    {
+        dataService.changeHiddenStatus(itemId)
+            .success(function (result) {
+                $scope.items[index].Hidden = !$scope.items[index].Hidden;
+            })
+            .error(function (result) { })
+    }
+
     //HELPERS
 
     var getIndex = function (array, id) {
