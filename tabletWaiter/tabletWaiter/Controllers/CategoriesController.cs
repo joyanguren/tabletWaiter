@@ -25,11 +25,11 @@ namespace tabletWaiter.Controllers
         {
             if (_repo.CreateCategory(category) && _repo.Save())
             {
-                return Request.CreateResponse(HttpStatusCode.NoContent);
+                return Request.CreateResponse(HttpStatusCode.OK, category);
             }
             else
             {
-                return Request.CreateResponse(HttpStatusCode.OK, category);
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
         }
 

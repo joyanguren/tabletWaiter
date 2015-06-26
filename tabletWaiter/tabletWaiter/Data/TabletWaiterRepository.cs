@@ -83,6 +83,9 @@ namespace tabletWaiter.Data
                 var item = _ctx.Items.Where(i => i.Id == itemToEdit.Id).First();
                 item.Name = itemToEdit.Name;
                 item.Description = itemToEdit.Description;
+                item.Categories = itemToEdit.Categories;
+                item.Price = itemToEdit.Price;
+                item.Image = itemToEdit.Image;
                 return true;
             }
             catch (Exception ex)

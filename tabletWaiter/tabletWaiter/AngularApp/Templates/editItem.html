@@ -1,17 +1,35 @@
 ﻿<div ng-controller="editItemController">
     <h2>Editar plato</h2>
-    <div class="inset">
+    <div class="inset addItemForm">
         <form>
             <div>
                 <span><label>Nombre</label></span>
                 <span><input type="text" ng-model="item.Name" class="textbox" id="active"></span>
+            </div>
+            <div class="categories">
+                <span><label>Categorías</label></span>
+                <div>
+                    <label ng-repeat="category in categories">
+                        <input type="checkbox" checklist-model="categoriesSelected" checklist-value="category.Id" ng-checked="checkCategory(category.Id, item.Categories)"> {{ category.Name }}
+                    </label>
+                </div>
+            </div>
+            <div>
+                <span><label>Imagen</label></span>
+                <input ng-hide="true" class="btn btn-file" type='file' id="myFileInput" ng-model="item.Image" onchange="angular.element(this).scope().fileNameChanged(this)" />
+                <img ng-click="clickFileUpload()" src="../../Content/icons/addImage.png" />
+                <img id="preview" ng-src="{{item.Image}}" />
             </div>
             <div>
                 <span><label>Descripción</label></span>
                 <span><textarea ng-model="item.Description"></textarea></span>
             </div>
             <div>
-                <button ng-click="editItem()" class="btn btn-success btn-lg buttonBig">Editar plato</button>
+                <span><label>Precio</label></span>
+                <input ng-model="item.Price" type="number" />
+            </div>
+            <div>
+                <button ng-click="editItem()" class="btn btn-success btn-lg buttonBig">Edit dish</button>
             </div>
         </form>
     </div>
