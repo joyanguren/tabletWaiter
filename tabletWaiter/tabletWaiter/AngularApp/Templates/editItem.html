@@ -10,7 +10,7 @@
                 <span><label>Categorías</label></span>
                 <div>
                     <label ng-repeat="category in categories">
-                        <input type="checkbox" checklist-model="categoriesSelected" checklist-value="category.Id" ng-checked="checkCategory(category.Id, item.Categories)"> {{ category.Name }}
+                        <input type="checkbox" checklist-model="categoriesSelected" checklist-value="category.Id"> {{ category.Name }}
                     </label>
                 </div>
             </div>

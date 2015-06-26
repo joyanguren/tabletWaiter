@@ -6,7 +6,7 @@
 
     dataService.getItem(itemId).then(function (result) {
         $scope.item = result.data;
-        $scope.categoriesSelected = $scope.item.Categories.split(',');
+        $scope.categoriesSelected = fillCategoriesInt($scope.item.Categories);
     });
 
     dataService.getCategories()
@@ -48,17 +48,14 @@
         $('#myFileInput').click();
     };
 
-    $scope.checkCategory = function (categoryId, itemCategoriesString) {
-        itemCategories = itemCategoriesString.split(',');
+    var fillCategoriesInt = function () {
+        var categoriesString = $scope.item.Categories.split(',');
+        var categoriesInt = [];
 
-        var result = false;
-        angular.forEach(itemCategories, function (itemCategory) {
-            if (itemCategory == categoryId) {
-                result = true;
-                return;
-            }
+        angular.forEach(categoriesString, function (item) {
+            categoriesInt.push(parseInt(item));
         });
 
-        return result;
+        return categoriesInt;
     };
 }]);
