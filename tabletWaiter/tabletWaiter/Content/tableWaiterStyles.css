@@ -30,6 +30,12 @@ h4 {
 .index a:hover {
   color: white;
 }
+.index .restaurantMenu {
+  float: left;
+}
+.index .clientMenu {
+  float: right;
+}
 .index li {
   margin: auto;
   width: 300px;
