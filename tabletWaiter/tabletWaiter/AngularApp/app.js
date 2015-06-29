@@ -1,4 +1,5 @@
-﻿var tabletWaiter = angular.module('tabletWaiter', ['ngRoute', 'checklist-model']);
+﻿/// <reference path="Templates/itemListClient.html" />
+var tabletWaiter = angular.module('tabletWaiter', ['ngRoute', 'checklist-model']);
 
 tabletWaiter.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
@@ -9,9 +10,12 @@ tabletWaiter.config(['$routeProvider', function ($routeProvider) {
         .when('/editItem/:id', { templateUrl: 'AngularApp/Templates/editItem.html' })
         .when('/categoryList', { templateUrl: 'AngularApp/Templates/categoryList.html' })
         .when('/addCategory', { templateUrl: 'AngularApp/Templates/addCategory.html' })
+        .when('/itemListClient', { templateUrl: 'AngularApp/Templates/itemListClient.html' })
         .otherwise({ redirectTo: '/' });
 }]);
 
 tabletWaiter.run(function () {
 
 });
+
+

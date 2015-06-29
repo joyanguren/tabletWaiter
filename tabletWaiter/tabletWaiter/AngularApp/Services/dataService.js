@@ -53,7 +53,12 @@
     var changeHiddenStatus = function (itemId) {
         var url = "/api/items/showItem/" + itemId;
         return $http.post(url);
-        };
+    };
+
+    var getShowItems = function () {
+        var url = "/api/items/showItem";
+        return $http.get(url);
+    };
 
     var service = {
         getItem: getItem,
@@ -64,7 +69,8 @@
         getCategories: getCategories,
         addCategory: addCategory,
         deleteCategory: deleteCategory,
-        changeHiddenStatus: changeHiddenStatus
+        changeHiddenStatus: changeHiddenStatus,
+        getShowItems: getShowItems
     };
 
     return service;

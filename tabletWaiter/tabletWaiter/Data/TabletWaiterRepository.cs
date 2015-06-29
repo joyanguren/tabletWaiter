@@ -95,6 +95,19 @@ namespace tabletWaiter.Data
             }
         }
 
+        public IEnumerable<Models.Item> getShowItems()
+        {
+            try
+            {
+                return _ctx.Items.Where(h => h.Hidden == false).ToList();
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return null;
+            }
+        }
+
         //CATEGORIES
         public bool CreateCategory(Models.Category category)
         {
@@ -122,6 +135,7 @@ namespace tabletWaiter.Data
                 return null;
             }
         }
+
 
         public bool deleteCategory(int categoryId)
         {
@@ -159,5 +173,7 @@ namespace tabletWaiter.Data
                 return false;
             }
         }
+
+
     }
 }

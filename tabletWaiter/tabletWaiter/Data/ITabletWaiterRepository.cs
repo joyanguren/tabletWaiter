@@ -21,6 +21,7 @@ namespace tabletWaiter.Data
         bool deleteItem(int itemId);
 
         bool editItem(Item itemToAdd);
+        IEnumerable<Item> getShowItems();
 
         //CATEGORIES
         bool CreateCategory(Category category);
@@ -30,5 +31,7 @@ namespace tabletWaiter.Data
         bool deleteCategory(int categoryId);
 
         bool changeHiddenStatus(int itemId);
+
+        
     }
 }

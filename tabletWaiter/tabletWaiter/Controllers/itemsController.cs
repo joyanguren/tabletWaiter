@@ -91,6 +91,21 @@ namespace tabletWaiter.Controllers
             }
         }
 
+        [Route("showItem")]
+        public HttpResponseMessage getShowItems()
+        {
+            var items = _repo.getShowItems();
+
+            if (items == null)
+            {
+                return Request.CreateResponse(HttpStatusCode.NoContent);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, items);
+            }
+        }
+
 
         [Route("showItem/{itemId}")]
         [HttpPost]
@@ -106,4 +121,7 @@ namespace tabletWaiter.Controllers
             }
         }
     }
+
+
+
 }
