@@ -243,6 +243,7 @@
     <Content Include="AngularApp\app.js" />
     <Content Include="AngularApp\build.js" />
     <Content Include="AngularApp\Controllers\addCategoryController.js" />
+    <Content Include="AngularApp\Controllers\callForm.js" />
     <Content Include="AngularApp\Controllers\categoryListController.js" />
     <Content Include="AngularApp\Controllers\editItemController.js" />
     <Content Include="AngularApp\Controllers\addItemController.js" />
@@ -253,6 +254,7 @@
     <Content Include="AngularApp\services.js" />
     <Content Include="AngularApp\Services\dataService.js" />
     <Content Include="AngularApp\Templates\addCategory.html" />
+    <Content Include="AngularApp\Templates\callForm.html" />
     <Content Include="AngularApp\Templates\categoryList.html" />
     <Content Include="AngularApp\Templates\editItem.html" />
     <Content Include="AngularApp\Templates\addItem.html" />
@@ -274,6 +276,7 @@
     <Content Include="Content\icons\delete.png" />
     <Content Include="Content\icons\edit.png" />
     <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\logo.png" />
     <Content Include="Content\js\css3-mediaqueries.js" />
     <Content Include="Content\js\cufon-replace.js" />
     <Content Include="Content\js\cufon-yui.js" />

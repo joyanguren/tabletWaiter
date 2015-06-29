@@ -16,47 +16,57 @@ h4 {
   height: 60px;
   width: 300px;
 }
-/*Index*/
-.index a {
+.rainbowList a {
   color: white;
   font-size: 20px;
   text-decoration: none;
   padding: 20px;
   margin: 10px auto;
 }
-.index a span {
+.rainbowList a span {
   padding: 20px;
 }
-.index a:hover {
+.rainbowList a:hover {
   color: white;
 }
+.rainbowList a:visited {
+  color: white;
+}
+.rainbowList li {
+  margin: auto;
+  width: 300px;
+}
+.rainbowList li:nth-child(1) a {
+  background-color: #433b8f;
+}
+.rainbowList li:nth-child(2) a {
+  background-color: #0184cd;
+}
+.rainbowList li:nth-child(3) a {
+  background-color: #7cbc19;
+}
+.rainbowList li:nth-child(4) a {
+  background-color: #ffbc00;
+}
+.rainbowList li:nth-child(5) a {
+  background-color: #f07502;
+}
+.rainbowList li:nth-child(6) a {
+  background-color: #d00110;
+}
+/*Header*/
+header {
+  margin-top: 30px;
+}
+.logo {
+  width: 450px;
+}
+/*Index*/
 .index .restaurantMenu {
   float: left;
 }
 .index .clientMenu {
   float: right;
-}
-.index li {
-  margin: auto;
-  width: 300px;
-}
-.index li:nth-child(1) a {
-  background-color: #433b8f;
-}
-.index li:nth-child(2) a {
-  background-color: #0184cd;
-}
-.index li:nth-child(3) a {
-  background-color: #7cbc19;
-}
-.index li:nth-child(4) a {
-  background-color: #ffbc00;
-}
-.index li:nth-child(5) a {
-  background-color: #f07502;
-}
-.index li:nth-child(6) a {
-  background-color: #d00110;
 }
 /*Form*/
 .inset {
@@ -152,8 +162,9 @@ textarea {
 .categoryFilter {
   margin: 5px;
   padding: 10px;
-  color: lightgray;
+  color: white;
   background-color: lightseagreen;
+  cursor: pointer;
 }
 /*Categories*/
 .addCategory {

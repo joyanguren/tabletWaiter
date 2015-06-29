@@ -18,8 +18,7 @@ h2, h3, h4 {
     width: 300px;
 }
 
-/*Index*/
-.index {
+.rainbowList {
     a {
         color: white;
         font-size: 20px;
@@ -30,18 +29,14 @@ h2, h3, h4 {
         span {
             padding: 20px;
         }
-    }
 
-    a:hover {
-        color: white;
-    }
+        &:hover {
+            color: white;
+        }
 
-    .restaurantMenu {
-        float: left;
-    }
-
-    .clientMenu {
-        float: right;
+        &:visited {
+            color: white;
+        }
     }
 
     li {
@@ -71,6 +66,26 @@ h2, h3, h4 {
 
     li:nth-child(6) a {
         background-color: #d00110;
+    }
+}
+
+/*Header*/
+header {
+    margin-top: 30px;
+}
+
+.logo {
+    width: 450px;
+}
+
+/*Index*/
+.index {
+    .restaurantMenu {
+        float: left;
+    }
+
+    .clientMenu {
+        float: right;
     }
 }
 
@@ -181,8 +196,9 @@ input[type="text"], textarea {
 .categoryFilter {
     margin: 5px;
     padding: 10px;
-    color: lightgray;
+    color: white;
     background-color: lightseagreen;
+    cursor: pointer;
 }
 
 /*Categories*/

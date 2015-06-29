@@ -18,13 +18,11 @@ html, body { height:100%;}
 .container {
 	margin: 0 auto;
 	position: relative;
-	width: 1000px;
 	font-size:.8125em;
 }
 
 	/* Header */
 	header{
-		height:72px;
 		overflow:hidden;
 	}
 	
