@@ -1,0 +1,23 @@
+﻿<div ng-controller="itemListClientController">
+    <h2>Lista de items de Clients:</h2>
+    <div class="loading" ng-show="loading">
+        <img src="../../Content/images/loading.gif" />
+    </div>
+
+    <div class="item" ng-hide="loading">
+        <span ng-repeat="category in categories" class="categoryFilter" ng-click="filterCategory(category.Id)">{{ category.Name }}</span>
+        <span class="categoryFilter" ng-click="filterCategory(-1)">Todos</span>
+    </div>
+
+    <div class="noItems" ng-show="itemsCount == 0 && !loading">
+        No hay ningún elemento
+    </div>
+
+    <div class="items" ng-hide="loading">
+        <div class="item" ng-repeat="item in items">
+            <img ng-src="{{item.Image}}" />
+            <span class="name">{{item.Name}}</span>
+            <p>{{item.Description}}</p>
+        </div>
+    </div>
+</div>
