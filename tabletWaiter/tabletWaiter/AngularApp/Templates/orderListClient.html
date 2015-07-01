@@ -1,29 +1,6 @@
 ﻿<div ng-controller="orderListClientController">
     <h2>Order Summary:</h2>
-    <div class="loading" ng-show="loading">
-        <img src="../../Content/images/loading.gif" />
-    </div>
 
-    <div class="item" ng-hide="loading">
-        <span ng-repeat="category in categories" class="categoryFilter" ng-click="filterCategory(category.Id)">{{ category.Name }}</span>
-        <span class="categoryFilter" ng-click="filterCategory(-1)">Todos</span>
-    </div>
-
-    <div class="noItems" ng-show="itemsCount == 0 && !loading">
-        No hay ningún elemento
-    </div>
-
-    <div class="items" ng-hide="loading">
-        <div class="item" ng-repeat="item in items">
-            <div class="icons">
-                <img ng-click="addItem(item.Name, item.Price)" src="../../Content/icons/orderFood.png" />
-            </div>
-            <img ng-src="{{item.Image}}" />
-            <span class="name">{{item.Name}} ----</span>
-            <span class="name">{{item.Price}} €</span>
-            <p>{{item.Description}}</p>
-        </div>
-    </div>
     <div class="numberOfItems">{{numberOfItems}} items</div>
     <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem.price, $index)">
         {{cartItem.name}} <span>x 1</span>
@@ -33,7 +10,4 @@
     </div>
 
     <button ng-click="getOrder()">Click ME!</button>
-    
-        
-    
 </div>
