@@ -9,7 +9,6 @@
         $scope.categories = result.data;
     });
 
-
     dataService.getShowItems().then(function (result) {
         $scope.items = result.data;
         allItems = result.data;
@@ -17,7 +16,6 @@
 
         $scope.loading = false;
     });
-
 
     $scope.filterCategory = function (categoryId) {
         $scope.loading = true;
@@ -40,5 +38,10 @@
         $scope.loading = false;
     };
 
+    $scope.addItem = function (item) {
+        $scope.cart.push(item);
+        $scope.totalPrice += item.price;
+        $scope.numberOfItems++;
+    };
 
 }]);
