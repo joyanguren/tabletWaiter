@@ -252,6 +252,7 @@
     <Content Include="AngularApp\Controllers\itemListController.js" />
     <Content Include="AngularApp\Language\esLanguage.js" />
     <Content Include="AngularApp\services.js" />
+    <Content Include="AngularApp\Services\cartService.js" />
     <Content Include="AngularApp\Services\dataService.js" />
     <Content Include="AngularApp\Templates\addCategory.html" />
     <Content Include="AngularApp\Templates\callForm.html" />
