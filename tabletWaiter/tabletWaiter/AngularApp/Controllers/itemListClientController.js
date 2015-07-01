@@ -38,8 +38,8 @@
         $scope.loading = false;
     };
 
-    $scope.addItem = function (name, price) {
-        cartService.addCart(name, price);
+    $scope.addItem = function (id, name, price) {
+        cartService.addCart(id, name, price);
 
         updateCartData();
     };

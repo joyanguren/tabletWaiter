@@ -21,10 +21,11 @@
         window.sessionStorage.totalPrice = totalPrice;
     }
 
-    var addCart = function (name, price) {
+    var addCart = function (id, name, price) {
         getSessionData();
 
         var cartItem = {
+            id: id,
             name: name,
             price: price
         }
