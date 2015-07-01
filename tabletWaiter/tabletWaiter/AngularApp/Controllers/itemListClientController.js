@@ -5,6 +5,10 @@
     $scope.categories;
     $scope.loading = true;
 
+    $scope.cart = [];
+    $scope.totalPrice = 0;
+    $scope.numberOfItems = 0;
+
     dataService.getCategories().then(function (result) {
         $scope.categories = result.data;
     });
@@ -40,8 +44,13 @@
 
     $scope.addItem = function (item) {
         $scope.cart.push(item);
-        $scope.totalPrice += item.price;
+        $scope.totalPrice += item.Price;
         $scope.numberOfItems++;
     };
 
+    $scope.deleteItem = function (item, index) {
+        $scope.cart.splice(index, 1);
+        $scope.totalPrice -= item.Price;
+        $scope.numberOfItems--;
+    }
 }]);

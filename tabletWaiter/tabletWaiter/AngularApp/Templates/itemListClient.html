@@ -24,8 +24,16 @@
         </div>
     </div>
 
-    <div class="orderInfo">
-        Number of items: {{numberOfItems}}<br/>
-        Total price: {{totalPrice}}
+    <div class="cart" ng-hide="loading || numberOfItems == 0">
+        <div class="cartPreview">
+            <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem, $index)">
+                {{cartItem.Name}} x 1
+            </div>
+        </div>
+        <div class="orderInfo">
+            <span>Number of items: {{numberOfItems}} items</span><br /><br />
+            <span>Total price: {{totalPrice}} €</span><br /><br />
+            <button class="btn btn-success">Order!</button>
+        </div>
     </div>
 </div>

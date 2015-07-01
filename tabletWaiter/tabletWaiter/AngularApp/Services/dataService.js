@@ -9,11 +9,12 @@
         return $http.get(url);
     };
 
-    var addItem = function (name, categories, image, description) {
+    var addItem = function (name, categories, image, price, description) {
         var item = {
             name: name,
             categories: categories,
             image: image,
+            price: price,
             description: description
         };
 

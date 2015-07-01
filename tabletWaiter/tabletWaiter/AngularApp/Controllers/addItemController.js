@@ -4,13 +4,14 @@
     $scope.categories;
     $scope.categoriesSelected = [];
     $scope.base64Image;
+    $scope.itemPrice;
 
     dataService.getCategories().then(function (result) {
         $scope.categories = result.data;
     });
 
     $scope.addItem = function () {
-        dataService.addItem($scope.itemName, $scope.categoriesSelected.toString(), $scope.base64Image, $scope.itemDescription).then(function (resutl) {
+        dataService.addItem($scope.itemName, $scope.categoriesSelected.toString(), $scope.base64Image, $scope.itemPrice, $scope.itemDescription).then(function (resutl) {
             swal("Buen trabajo", "El elemento ha sido introducido correctamente", "success")
 
             resetForm();

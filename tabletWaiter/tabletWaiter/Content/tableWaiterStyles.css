@@ -159,6 +159,25 @@ textarea {
   color: black;
   padding: 30px;
 }
+.cart {
+  float: right;
+  position: fixed;
+  top: 60px;
+  right: 60px;
+  background-color: lightcoral;
+  padding: 40px;
+  border: 1px solid black;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.cart .cartPreview div {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.cart .orderInfo {
+  margin-top: 20px;
+}
 .categoryFilter {
   margin: 5px;
   padding: 10px;
