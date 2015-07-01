@@ -194,26 +194,46 @@ input[type="text"], textarea {
 }
 
 .cart {
-    float: right;
+    min-width: 300px;
     position: fixed;
     top: 60px;
     right: 60px;
     background-color: lightcoral;
-    padding: 40px;
+    padding: 20px 40px;
     border: 1px solid black;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     border-radius: 20px;
 
+    .numberOfItems {
+        margin-bottom: 15px;
+        text-align: right;
+        margin-right: -15PX;
+    }
+
     .cartPreview {
+        margin-bottom: 10px;
         div {
-            margin-top: 2px;
-            margin-bottom: 2px;
+            margin: 5px 0;
+            text-align: left;
+
+            span {
+                float: right;
+                margin-left: 20px;
+            }
         }
     }
 
     .orderInfo {
         margin-top: 20px;
+        text-align: right;
+        margin-bottom: 20px;
+
+        span {
+            &:first-child {
+                float: left;
+            }
+        }
     }
 }
 
