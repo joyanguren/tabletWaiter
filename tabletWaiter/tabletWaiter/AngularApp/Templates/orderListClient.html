@@ -1,5 +1,5 @@
-﻿<div ng-controller="itemListClientController">
-    <h2>Lista de items de Clients:</h2>
+﻿<div ng-controller="orderListClientController">
+    <h2>Order Summary:</h2>
     <div class="loading" ng-show="loading">
         <img src="../../Content/images/loading.gif" />
     </div>
@@ -19,23 +19,21 @@
                 <img ng-click="addItem(item.Name, item.Price)" src="../../Content/icons/orderFood.png" />
             </div>
             <img ng-src="{{item.Image}}" />
-            <span class="name">{{item.Name}} ----</span> 
+            <span class="name">{{item.Name}} ----</span>
             <span class="name">{{item.Price}} €</span>
             <p>{{item.Description}}</p>
         </div>
     </div>
-
-    <div class="cart" ng-hide="loading || numberOfItems == 0">
-        <div class="numberOfItems">{{numberOfItems}} items</div>
-        <div class="cartPreview">
-            <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem.price, $index)">
-                {{cartItem.name}} <span>x 1</span>
-            </div>
-        </div>
-        <hr />
-        <div class="orderInfo">
-            <span>Total</span><span>{{totalPrice}} €</span>
-        </div>
-        <a class="btn btn-lg btn-block btn-success" href="#orderListClient">Order!</a>
+    <div class="numberOfItems">{{numberOfItems}} items</div>
+    <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem.price, $index)">
+        {{cartItem.name}} <span>x 1</span>
     </div>
+    <div class="orderInfo">
+        <span>Total</span><span>{{totalPrice}} €</span>
+    </div>
+
+    <button ng-click="getOrder()">Click ME!</button>
+    
+        
+    
 </div>
