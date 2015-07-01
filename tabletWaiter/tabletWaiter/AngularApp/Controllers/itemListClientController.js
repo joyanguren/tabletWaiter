@@ -1,14 +1,10 @@
-﻿tabletWaiter.controller('itemListClientController', ['$scope', '$location', 'dataService', function ($scope, $location, dataService) {
+﻿tabletWaiter.controller('itemListClientController', ['$scope', '$location', 'dataService', 'cartService', function ($scope, $location, dataService, cartService) {
     $scope.items;
     var allItems;
     $scope.itemsCount;
     $scope.categories;
     $scope.loading = true;
-
-    $scope.cart = [];
-    $scope.totalPrice = 0;
-    $scope.numberOfItems = 0;
-
+    
     dataService.getCategories().then(function (result) {
         $scope.categories = result.data;
     });
@@ -42,15 +38,29 @@
         $scope.loading = false;
     };
 
-    $scope.addItem = function (item) {
-        $scope.cart.push(item);
-        $scope.totalPrice += item.Price;
-        $scope.numberOfItems++;
+    $scope.addItem = function (name, price) {
+        cartService.addCart(name, price);
+
+        updateCartData();
     };
 
-    $scope.deleteItem = function (item, index) {
-        $scope.cart.splice(index, 1);
-        $scope.totalPrice -= item.Price;
-        $scope.numberOfItems--;
+    $scope.deleteItem = function (price, index) {
+        cartService.deleteCart(price, index);
+
+        updateCartData();
     }
+
+
+    //HELPERS
+    var updateCartData = function () {
+        var cartData = cartService.getCartData();
+
+        $scope.cart = cartData.cart;
+        $scope.totalPrice = cartData.totalPrice;
+        $scope.numberOfItems = cartData.quantity;
+    }
+
+
+    //INITIALIZERS
+    updateCartData();
 }]);

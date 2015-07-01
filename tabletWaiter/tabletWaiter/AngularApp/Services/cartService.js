@@ -1,30 +1,81 @@
 ﻿tabletWaiter.factory('cartService', function ($http) {
-    var cart = [];
-    $scope.quantity;
-    $scope.price;
+    var cart;
+    var quantity;
+    var totalPrice;
 
+    var getSessionData = function () {
+        if (window.sessionStorage.cart) {
+            cart = JSON.parse(window.sessionStorage.cart);
+            quantity = parseInt(window.sessionStorage.quantity);
+            totalPrice = parseInt(window.sessionStorage.totalPrice);
+        } else {
+            cart = [];
+            quantity = 0;
+            totalPrice = 0;
+        }
+    }
 
-    var addCart = function (item) {
-        cart.push(item);
+    var setSessionData = function () {
+        window.sessionStorage.cart = JSON.stringify(cart);
+        window.sessionStorage.quantity = quantity;
+        window.sessionStorage.totalPrice = totalPrice;
+    }
+
+    var addCart = function (name, price) {
+        getSessionData();
+
+        var cartItem = {
+            name: name,
+            price: price
+        }
+
+        cart.push(cartItem);
+        quantity++;
+        totalPrice += price;
+
+        setSessionData();
     };
 
-    var getCart = function () {
-        return cart;
+    var getCartData = function () {
+        var returndata;
+
+        if (window.sessionStorage.cart) {
+            returndata = {
+                cart: JSON.parse(window.sessionStorage.cart),
+                quantity: window.sessionStorage.quantity,
+                totalPrice: window.sessionStorage.totalPrice
+            }
+        } else {
+            returndata = {
+                cart: [],
+                quantity: 0,
+                totalPrice: 0
+            }
+        }
+
+        return returndata;
     };
 
     var clearCart = function () {
         cart = [];
     };
 
-    var deleteItem = function (item, index) {
+    var deleteCart = function (price, index) {
+        getSessionData();
+
         cart.splice(index, 1);
+        quantity--;
+        totalPrice -= price;
+
+        setSessionData();
+
     };
 
     var service = {
         addCart: addCart,
-        getCart: getCart,
+        getCartData: getCartData,
         clearCart: clearCart,
-        deleteItem: deleteItem
+        deleteCart: deleteCart
     };
 
     return service;

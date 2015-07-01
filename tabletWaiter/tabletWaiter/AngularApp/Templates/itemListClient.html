@@ -16,7 +16,7 @@
     <div class="items" ng-hide="loading">
         <div class="item" ng-repeat="item in items">
             <div class="icons">
-                <img ng-click="addItem(item)" src="../../Content/icons/orderFood.png" />
+                <img ng-click="addItem(item.Name, item.Price)" src="../../Content/icons/orderFood.png" />
             </div>
             <img ng-src="{{item.Image}}" />
             <span class="name">{{item.Name}} ----</span> 
@@ -27,8 +27,8 @@
 
     <div class="cart" ng-hide="loading || numberOfItems == 0">
         <div class="cartPreview">
-            <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem, $index)">
-                {{cartItem.Name}} x 1
+            <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem.price, $index)">
+                {{cartItem.name}} x 1
             </div>
         </div>
         <div class="orderInfo">
