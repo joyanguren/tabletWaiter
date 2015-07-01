@@ -17,31 +17,6 @@
         $scope.loading = false;
     });
 
-    $scope.deleteItem = function (itemId) {
-
-        swal({
-            title: "¿Estás seguro?",
-            text: "Vas a borrar permanentemente el plato",
-            type: "warning",
-            showCancelButton: true,
-            confirButtonColor: "#DD6B55",
-            confirmButtonText: "Sí, ¡borralo!",
-            closeOnConfirm: false
-        }, function () {
-            dataService.deleteItem(itemId).then(function (result) {
-                var indexToDelete = result.data;
-                removeIndex($scope.items, getIndex($scope.items, indexToDelete));
-                $scope.itemsCount--;
-
-                swal("Buen trabajo", "El elemento ha sido borrado correctamente", "success");
-            });
-        });
-    };
-
-    $scope.editItem = function (itemId) {
-        $location.path("/editItem/" + itemId);
-    };
-
     $scope.filterCategory = function (categoryId) {
         $scope.loading = true;
         $scope.items = [];
@@ -62,15 +37,6 @@
         $scope.itemsCount = $scope.items.length;
         $scope.loading = false;
     };
-
-    $scope.showItem = function (itemId, index)
-    {
-        dataService.changeHiddenStatus(itemId)
-            .success(function (result) {
-                $scope.items[index].Hidden = !$scope.items[index].Hidden;
-            })
-            .error(function (result) { })
-    }
 
     //HELPERS
 
