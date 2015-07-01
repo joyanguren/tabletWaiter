@@ -50,6 +50,7 @@
         $scope.categoriesSelected = [];
         $('input[type=checkbox]').prop("checked", false);
         $scope.base64Image = "";
+        $scope.itemPrice = 0;
     };
 
 }]);
