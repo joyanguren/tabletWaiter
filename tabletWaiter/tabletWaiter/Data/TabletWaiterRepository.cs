@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
+using tabletWaiter.Models;
 
 namespace tabletWaiter.Data
 {
@@ -176,7 +177,7 @@ namespace tabletWaiter.Data
 
 
         //ORDERS
-        public IEnumerable<Models.Order> GetOrder()
+        public IEnumerable<Order> GetOrder()
         {
             try
             {
@@ -189,10 +190,7 @@ namespace tabletWaiter.Data
             }
         }
 
-
-
-
-        public bool addOrder(Models.Order order)
+        public bool addOrder(Order order)
         {
             try
             {
