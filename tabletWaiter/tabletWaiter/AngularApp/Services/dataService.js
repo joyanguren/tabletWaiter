@@ -63,7 +63,7 @@
 
     var sendOrders = function (cart) {
         var order = {
-            tableNumber: 5,
+            tableNumber: window.sessionStorage.tableNumber,
             itemsOrdered: cart
         }
 

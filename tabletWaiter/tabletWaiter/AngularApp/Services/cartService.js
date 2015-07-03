@@ -61,6 +61,7 @@
         window.sessionStorage.cart = "";
         window.sessionStorage.quantity = "";
         window.sessionStorage.totalPrice = "";
+        window.sessionStorage.tableNumber = "";
     };
 
     var deleteCart = function (price, index) {
@@ -81,11 +82,16 @@
         return $http.post(url, item);
     };
 
+    var setSessionDataClientTableInfo = function (tableNumber) {
+        window.sessionStorage.tableNumber = tableNumber;
+    };
+
     var service = {
         addCart: addCart,
         getCartData: getCartData,
         clearCart: clearCart,
-        deleteCart: deleteCart
+        deleteCart: deleteCart,
+        setSessionDataClientTableInfo: setSessionDataClientTableInfo
     };
 
     return service;
