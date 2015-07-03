@@ -5,8 +5,17 @@
     $scope.categories;
     $scope.loading = true;
 
-    $scope.getOrder = function () {
-        alert($scope.numberOfItems);
+    $scope.sendOrders = function () {
+        dataService.sendOrders($scope.cart)
+        .success(function () {
+            swal("Buen trabajo", "El elemento ha sido introducido correctamente", "success");
+            cartService.clearCart();
+            $location.path("/");
+        })
+        .error(function () {
+            swal("Something happened", "Order has not saved correctly", "error");
+
+        });
     };
 
     $scope.addItem = function (name, price) {

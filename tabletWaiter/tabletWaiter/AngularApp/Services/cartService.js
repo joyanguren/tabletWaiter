@@ -25,7 +25,7 @@
         getSessionData();
 
         var cartItem = {
-            id: id,
+            itemId: id,
             name: name,
             price: price
         }
@@ -58,7 +58,9 @@
     };
 
     var clearCart = function () {
-        cart = [];
+        window.sessionStorage.cart = "";
+        window.sessionStorage.quantity = "";
+        window.sessionStorage.totalPrice = "";
     };
 
     var deleteCart = function (price, index) {
@@ -70,6 +72,13 @@
 
         setSessionData();
 
+    };
+
+    var addOrder = function () {
+
+
+        var url = "/api/orderItems/add";
+        return $http.post(url, item);
     };
 
     var service = {

@@ -175,5 +175,50 @@ namespace tabletWaiter.Data
         }
 
 
+        //ORDERS
+        public IEnumerable<Models.Order> GetOrder()
+        {
+            try
+            {
+                return _ctx.Orders.ToList();
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return null;
+            }
+        }
+
+
+
+
+        public bool addOrder(Models.Order order)
+        {
+            try
+            {
+                _ctx.Orders.Add(order);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return false;
+            }
+        }
+
+        //ORDER ITEM
+        public bool addOrderItem(Models.Item orderItemToAdd)
+        {
+            try
+            {
+                //_ctx.OrderItems.Add(orderItemToAdd);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return false;
+            }
+        }
     }
 }

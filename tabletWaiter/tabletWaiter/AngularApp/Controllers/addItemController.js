@@ -12,7 +12,7 @@
 
     $scope.addItem = function () {
         dataService.addItem($scope.itemName, $scope.categoriesSelected.toString(), $scope.base64Image, $scope.itemPrice, $scope.itemDescription).then(function (resutl) {
-            swal("Buen trabajo", "El elemento ha sido introducido correctamente", "success")
+            swal("Buen trabajo", "El elemento ha sido introducido correctamente", "success");
 
             resetForm();
         });

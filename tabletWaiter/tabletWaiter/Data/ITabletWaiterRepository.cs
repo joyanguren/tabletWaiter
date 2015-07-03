@@ -32,6 +32,13 @@ namespace tabletWaiter.Data
 
         bool changeHiddenStatus(int itemId);
 
-        
+
+        //ORDERS
+        IEnumerable<Order> GetOrder();
+
+        bool addOrder(Order order);
+
+        //ORDERITEM
+        bool addOrderItem(Item orderItemToAdd);
     }
 }

@@ -61,6 +61,16 @@
         return $http.get(url);
     };
 
+    var sendOrders = function (cart) {
+        var order = {
+            tableNumber: 5,
+            itemsOrdered: cart
+        }
+
+        var url = "/api/orders/add";
+        return $http.post(url, order);
+    }
+
     var service = {
         getItem: getItem,
         getAllItems: getAllItems,
@@ -71,7 +81,8 @@
         addCategory: addCategory,
         deleteCategory: deleteCategory,
         changeHiddenStatus: changeHiddenStatus,
-        getShowItems: getShowItems
+        getShowItems: getShowItems,
+        sendOrders: sendOrders
     };
 
     return service;
