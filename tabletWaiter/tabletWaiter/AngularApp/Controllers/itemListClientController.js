@@ -4,6 +4,7 @@
     $scope.itemsCount;
     $scope.categories;
     $scope.loading = true;
+    $scope.tableNumber = window.sessionStorage.tableNumber;
     
     dataService.getCategories().then(function (result) {
         $scope.categories = result.data;

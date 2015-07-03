@@ -4,6 +4,7 @@
     $scope.itemsCount;
     $scope.categories;
     $scope.loading = true;
+    
 
     $scope.sendOrders = function () {
         dataService.sendOrders($scope.cart)

@@ -14,6 +14,7 @@ tabletWaiter.config(['$routeProvider', function ($routeProvider) {
         .when('/call', { templateUrl: 'AngularApp/Templates/callForm.html' })
         .when('/orderListClient', { templateUrl: 'AngularApp/Templates/orderListClient.html' })
         .when('/alerts', { templateUrl: 'AngularApp/Templates/alertsPage.html' })
+        .when('/setup', { templateUrl: 'AngularApp/Templates/setupScreen.html' })
         .otherwise({ redirectTo: '/' });
 }]);
 

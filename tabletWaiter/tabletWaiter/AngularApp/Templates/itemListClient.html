@@ -1,5 +1,5 @@
 ﻿<div ng-controller="itemListClientController">
-    <h2>Lista de items de Clients:</h2>
+    <h2>Lista de items de Clients: </h2>
     <div class="loading" ng-show="loading">
         <img src="../../Content/images/loading.gif" />
     </div>
@@ -26,6 +26,7 @@
     </div>
 
     <div class="cart" ng-hide="loading || numberOfItems == 0">
+        <div>Table: {{tableNumber}}</div>
         <div class="numberOfItems">{{numberOfItems}} items</div>
         <div class="cartPreview">
             <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem.price, $index)">
