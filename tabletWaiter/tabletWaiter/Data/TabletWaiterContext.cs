@@ -25,5 +25,7 @@ namespace tabletWaiter.Data
 
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+
+        public DbSet<Alert> Alerts { get; set; }
     }
 }

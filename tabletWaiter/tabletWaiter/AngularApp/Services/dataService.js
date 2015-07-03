@@ -71,6 +71,16 @@
         return $http.post(url, order);
     }
 
+    var sendSimpleAlert = function (tableNumber) {
+        var url = "/api/alerts/addSimpleAlert/" + tableNumber;
+        return $http.post(url);
+    };
+
+    var getAlerts = function () {
+        var url = "/api/alerts/allSimple";
+        return $http.post(url);
+    };
+
     var service = {
         getItem: getItem,
         getAllItems: getAllItems,
@@ -82,7 +92,9 @@
         deleteCategory: deleteCategory,
         changeHiddenStatus: changeHiddenStatus,
         getShowItems: getShowItems,
-        sendOrders: sendOrders
+        sendOrders: sendOrders,
+        sendSimpleAlert: sendSimpleAlert,
+        getAlerts: getAlerts
     };
 
     return service;

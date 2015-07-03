@@ -218,6 +218,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlertsController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
@@ -232,6 +233,7 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Alert.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Item.cs" />
@@ -246,6 +248,7 @@
     <Content Include="AngularApp\app.js" />
     <Content Include="AngularApp\build.js" />
     <Content Include="AngularApp\Controllers\addCategoryController.js" />
+    <Content Include="AngularApp\Controllers\alertsPageController.js" />
     <Content Include="AngularApp\Controllers\callForm.js" />
     <Content Include="AngularApp\Controllers\categoryListController.js" />
     <Content Include="AngularApp\Controllers\editItemController.js" />
@@ -259,6 +262,7 @@
     <Content Include="AngularApp\Services\cartService.js" />
     <Content Include="AngularApp\Services\dataService.js" />
     <Content Include="AngularApp\Templates\addCategory.html" />
+    <Content Include="AngularApp\Templates\alertsPage.html" />
     <Content Include="AngularApp\Templates\callForm.html" />
     <Content Include="AngularApp\Templates\categoryList.html" />
     <Content Include="AngularApp\Templates\editItem.html" />

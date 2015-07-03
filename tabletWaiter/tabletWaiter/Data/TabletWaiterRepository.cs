@@ -218,5 +218,38 @@ namespace tabletWaiter.Data
                 return false;
             }
         }
+
+
+        //ALERTS
+        public bool AddSimpleAlert(string tableNumber)
+        {
+            try
+            {
+                Alert alert = new Alert();
+                alert.TableNumber = tableNumber;
+
+                _ctx.Alerts.Add(alert);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return false;
+            }
+        }
+
+
+        public List<Alert> AllSimpleAlerts()
+        {
+            try
+            {
+                return _ctx.Alerts.ToList();
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.Message);
+                return null;
+            }
+        }
     }
 }

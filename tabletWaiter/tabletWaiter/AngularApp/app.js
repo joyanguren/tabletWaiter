@@ -13,11 +13,12 @@ tabletWaiter.config(['$routeProvider', function ($routeProvider) {
         .when('/itemListClient', { templateUrl: 'AngularApp/Templates/itemListClient.html' })
         .when('/call', { templateUrl: 'AngularApp/Templates/callForm.html' })
         .when('/orderListClient', { templateUrl: 'AngularApp/Templates/orderListClient.html' })
+        .when('/alerts', { templateUrl: 'AngularApp/Templates/alertsPage.html' })
         .otherwise({ redirectTo: '/' });
 }]);
 
-tabletWaiter.run(function () {
-
+tabletWaiter.run(function ($rootScope) {
+    $rootScope.alerts = [];
 });
 
 

@@ -40,5 +40,10 @@ namespace tabletWaiter.Data
 
         //ORDERITEM
         bool addOrderItem(Item orderItemToAdd);
+
+        //ALERTS
+        bool AddSimpleAlert(string tableNumber);
+
+        List<Alert> AllSimpleAlerts();
     }
 }
