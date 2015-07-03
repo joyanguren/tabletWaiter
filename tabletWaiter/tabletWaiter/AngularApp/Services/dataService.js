@@ -64,7 +64,7 @@
     var sendOrders = function (cart) {
         var order = {
             tableNumber: 5,
-            itemsOrdered: cart
+            itemsOrdered: JSON.stringify(cart)
         }
 
         var url = "/api/orders/add";

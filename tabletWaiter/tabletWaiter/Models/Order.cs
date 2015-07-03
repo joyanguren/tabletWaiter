@@ -9,6 +9,6 @@ namespace tabletWaiter.Models
     {
         public int Id { get; set; }
         public int TableNumber { get; set; }
-        public List<OrderItem> ItemsOrdered { get; set; }
+        public string ItemsOrdered { get; set; }
     }
 }
