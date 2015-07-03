@@ -63,13 +63,9 @@
 
     var sendOrders = function (cart) {
         var order = {
-<<<<<<< HEAD
             tableNumber: window.sessionStorage.tableNumber,
-            itemsOrdered: cart
-=======
             tableNumber: 5,
             itemsOrdered: JSON.stringify(cart)
->>>>>>> 2edb77b5af15e67bb35ec56e881a1d87d1c74d32
         }
 
         var url = "/api/orders/add";
