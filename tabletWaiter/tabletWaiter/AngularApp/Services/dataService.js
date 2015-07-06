@@ -64,7 +64,6 @@
     var sendOrders = function (cart) {
         var order = {
             tableNumber: window.sessionStorage.tableNumber,
-            tableNumber: 5,
             itemsOrdered: JSON.stringify(cart)
         }
 

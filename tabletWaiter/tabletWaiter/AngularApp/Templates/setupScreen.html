@@ -1,13 +1,10 @@
 ﻿<div ng-controller="setupScreenController">
     <ul class="rainbowList">
-        <li><a class="btn" ng-click="tryme()" ng-show="tryme2"><span>START!</span></a></li>
+        <li><a class="btn" ng-click="hideStart()" ng-show="showStart"><span>START!</span></a></li>
     </ul>
-    <div ng-hide="tryme2">
-        Table Number: <input type="text" ng-model="tryme3" />
+    <div ng-hide="showStart">
+        Table Number: <input type="text" ng-model="tableNumber" />
 
-
-        <div>{{tryme3}}</div>
-
-        <button class="btn" ng-click="tryme4()" ng-hide="tryme2">Button!</button>
+        <button class="btn" ng-click="storageTableNumber()" ng-hide="showStart">Button!</button>
     </div>
 </div>

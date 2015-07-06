@@ -82,16 +82,11 @@
         return $http.post(url, item);
     };
 
-    var setSessionDataClientTableInfo = function (tableNumber) {
-        window.sessionStorage.tableNumber = tableNumber;
-    };
-
     var service = {
         addCart: addCart,
         getCartData: getCartData,
         clearCart: clearCart,
         deleteCart: deleteCart,
-        setSessionDataClientTableInfo: setSessionDataClientTableInfo
     };
 
     return service;

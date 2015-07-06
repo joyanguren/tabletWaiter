@@ -1,12 +1,12 @@
-﻿tabletWaiter.controller('setupScreenController', ['$scope', '$location', 'dataService', 'cartService', function ($scope, $location, dataService, cartService) {
-    $scope.tryme2 = true;
-    $scope.tryme3 = "";
-    $scope.tryme = function () {
-        $scope.tryme2 = false;
+﻿tabletWaiter.controller('setupScreenController', ['$scope', '$location', function ($scope, $location) {
+    $scope.showStart = true;
+    $scope.tableNumber = "";
+    $scope.hideStart = function () {
+        $scope.showStart = false;
     }
 
-    $scope.tryme4 = function () {
-        cartService.setSessionDataClientTableInfo($scope.tryme3);
-        $location.path("/");
+    $scope.storageTableNumber = function () {
+        window.sessionStorage.tableNumber = $scope.tableNumber;
+        $location.path("/index");
     }
 }]);

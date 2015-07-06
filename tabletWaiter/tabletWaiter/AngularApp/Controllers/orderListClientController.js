@@ -11,7 +11,7 @@
         .success(function () {
             swal("Buen trabajo", "El elemento ha sido introducido correctamente", "success");
             cartService.clearCart();
-            $location.path("/");
+            $location.path("/index");
         })
         .error(function () {
             swal("Something happened", "Order has not saved correctly", "error");

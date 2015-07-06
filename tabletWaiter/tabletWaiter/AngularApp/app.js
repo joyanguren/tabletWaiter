@@ -3,7 +3,8 @@ var tabletWaiter = angular.module('tabletWaiter', ['ngRoute', 'checklist-model']
 
 tabletWaiter.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-        .when('/', { templateUrl: 'AngularApp/Templates/index.html' })
+        .when('/', { templateUrl: 'AngularApp/Templates/setupScreen.html' })
+        .when('/index', { templateUrl: 'AngularApp/Templates/index.html' })
         .when('/menu', { templateUrl: 'AngularApp/Templates/index.html' })
         .when('/addItem', { templateUrl: 'AngularApp/Templates/addItem.html' })
         .when('/itemList', { templateUrl: 'AngularApp/Templates/itemList.html' })
