@@ -7,6 +7,10 @@
 
     <div ng-repeat="o in orders">
         <span>{{o.TableNumber}}</span>
-        <span>{{o.ItemsOrdered}}</span>
+        <div ng-repeat="itemOrdered in o.ItemsOrdered">
+            <div>
+                {{itemOrdered.itemId}} - {{itemOrdered.name}} - {{itemOrdered.price}} €
+            </div>
+        </div>
     </div>
 </div>
