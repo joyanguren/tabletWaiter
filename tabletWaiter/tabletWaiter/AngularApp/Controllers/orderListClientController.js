@@ -1,5 +1,5 @@
 ﻿tabletWaiter.controller('orderListClientController', ['$scope', '$location', 'dataService', 'cartService', function ($scope, $location, dataService, cartService) {
-    $scope.items;
+    $scope.items;swal("Something happened", "Order has not saved correctly", "error");
     var allItems;
     $scope.itemsCount;
     $scope.categories;
@@ -14,7 +14,7 @@
             $location.path("/index");
         })
         .error(function () {
-            swal("Something happened", "Order has not saved correctly", "error");
+            
 
         });
     };

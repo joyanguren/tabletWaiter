@@ -257,6 +257,7 @@
     <Content Include="AngularApp\Controllers\itemListClientController.js" />
     <Content Include="AngularApp\Controllers\itemListController.js" />
     <Content Include="AngularApp\Controllers\orderListClientController.js" />
+    <Content Include="AngularApp\Controllers\orderListController.js" />
     <Content Include="AngularApp\Controllers\setupScreenController.js" />
     <Content Include="AngularApp\Language\esLanguage.js" />
     <Content Include="AngularApp\services.js" />
@@ -271,6 +272,7 @@
     <Content Include="AngularApp\Templates\index.html" />
     <Content Include="AngularApp\Templates\itemList.html" />
     <Content Include="AngularApp\Templates\itemListClient.html" />
+    <Content Include="AngularApp\Templates\orderList.html" />
     <Content Include="AngularApp\Templates\orderListClient.html" />
     <Content Include="AngularApp\Templates\setupScreen.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />

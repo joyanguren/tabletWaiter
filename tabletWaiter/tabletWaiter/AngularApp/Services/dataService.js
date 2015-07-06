@@ -81,6 +81,11 @@
         return $http.post(url);
     };
 
+    var getOrders = function () {
+        var url = "api/orders/all";
+        return $http.get(url);
+    }
+
     var service = {
         getItem: getItem,
         getAllItems: getAllItems,
@@ -94,7 +99,8 @@
         getShowItems: getShowItems,
         sendOrders: sendOrders,
         sendSimpleAlert: sendSimpleAlert,
-        getAlerts: getAlerts
+        getAlerts: getAlerts,
+        getOrders: getOrders
     };
 
     return service;
