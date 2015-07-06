@@ -5,9 +5,9 @@
         <img src="../../Content/images/loading.gif" />
     </div>
 
-    <div ng-repeat="o in orders">
-        <span>{{o.TableNumber}}</span>
-        <div ng-repeat="itemOrdered in o.ItemsOrdered">
+    <div ng-repeat="order in orders">
+        <span>{{order.TableNumber}}</span>
+        <div ng-repeat="itemOrdered in order.ItemsOrdered">
             <div>
                 {{itemOrdered.itemId}} - {{itemOrdered.name}} - {{itemOrdered.price}} €
             </div>
