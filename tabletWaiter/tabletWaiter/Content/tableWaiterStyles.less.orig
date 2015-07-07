@@ -343,6 +343,8 @@ input[type="text"], textarea {
     border: 1px solid #000;
     border-radius: 20px;
 }
+<<<<<<< HEAD
+=======
 
 /*Table Number*/
 .showTableNumber{
@@ -357,3 +359,4 @@ input[type="text"], textarea {
     -webkit-border-radius: 20px;
     border-radius: 20px;
 }
+>>>>>>> 193f0b571466eaf2afa3ceb6dc59c5bf25e8dff6
