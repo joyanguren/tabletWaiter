@@ -21,6 +21,11 @@
     </header>
     <section id="main">
         @RenderBody()
+        <div ng-controller="indexController">
+            <div class="showTableNumber">
+                Table No.: {{tableNumber}}
+            </div>
+        </div>
     </section>
 
     <!--Scripts && Angular-->

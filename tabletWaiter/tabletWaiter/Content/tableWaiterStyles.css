@@ -164,9 +164,8 @@ textarea {
   position: fixed;
   top: 60px;
   right: 60px;
-  background-color: lightcoral;
   padding: 20px 40px;
-  border: 1px solid black;
+  border: 1px solid white;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
@@ -174,7 +173,7 @@ textarea {
 .cart .numberOfItems {
   margin-bottom: 15px;
   text-align: right;
-  margin-right: -15PX;
+  margin-right: -15 PX;
 }
 .cart .cartPreview {
   margin-bottom: 10px;
@@ -194,6 +193,8 @@ textarea {
 .cart .cartPreview .cartItem .itemQuantity {
   margin-left: 20px;
   vertical-align: middle;
+  margin-top: 6px;
+  float: right;
 }
 .cart .orderInfo {
   margin-top: 20px;
@@ -241,7 +242,7 @@ textarea {
   margin-left: 50px;
   text-align: left;
 }
-/*Start Screen*/
+/*Start/Setup Screen*/
 .startButton {
   background-color: purple;
   border: 2px solid #bbb;
@@ -251,6 +252,13 @@ textarea {
   position: absolute;
   top: 50%;
   left: 45%;
+}
+.keypad {
+  margin: auto;
+}
+.keypad td img {
+  width: 90px;
+  height: 90px;
 }
 /*Orders*/
 .order {

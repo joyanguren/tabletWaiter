@@ -19,19 +19,18 @@
                 <img ng-click="addItem(item.Id, item.Name, item.Price)" src="../../Content/icons/orderFood.png" />
             </div>
             <img ng-src="{{item.Image}}" />
-            <span class="name">{{item.Name}} ----</span> 
+            <span class="name">{{item.Name}} ----</span>
             <span class="name">{{item.Price}} €</span>
             <p>{{item.Description}}</p>
         </div>
     </div>
 
     <div class="cart" ng-hide="loading || numberOfItems == 0">
-        <div>Table: {{tableNumber}}</div>
         <div class="numberOfItems">{{numberOfItems}} items</div>
         <div class="cartPreview">
             <div ng-repeat="cartItem in cart track by $index" class="cartItem">
-                <img ng-click="deleteItem(cartItem.price, $index)" src="../../Content/images/eliminar.png" /> <span class="itemName">{{cartItem.name}}</span> <span class ="itemQuantity">x 1</spanclass>
-</div>
+                <img ng-click="deleteItem(cartItem.price, $index)" src="../../Content/images/eliminar.png" /> <span class="itemName">{{cartItem.name}}</span> <span class="itemQuantity">x 1</spanclass>
+            </div>
         </div>
         <hr />
         <div class="orderInfo">

@@ -1,4 +1,4 @@
-﻿tabletWaiter.controller('setupScreenController', ['$scope', '$location', function ($scope, $location) {
+﻿tabletWaiter.controller('setupScreenController', ['$scope', '$location', '$rootScope', function ($scope, $location, $rootScope) {
     $scope.showStart = true;
     $scope.tableNumber = "";
     $scope.hideStart = function () {
@@ -8,6 +8,7 @@
     $scope.storageTableNumber = function () {
         if ($scope.tableNumber) {
             window.sessionStorage.tableNumber = $scope.tableNumber;
+            $rootScope.tableNumber = $scope.tableNumber;
             $location.path("/index");
         } else {
             swal("No data", "You have to introduce table number", "error");
