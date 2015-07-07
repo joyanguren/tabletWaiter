@@ -3,8 +3,20 @@
         <li><a class="btn" ng-click="hideStart()" ng-show="showStart"><span>START!</span></a></li>
     </ul>
     <div ng-hide="showStart">
-        Table Number: <input type="text" ng-model="tableNumber" />
-
+        Table Number: {{tableNumber}}
+        <hr />
         <button class="btn" ng-click="storageTableNumber()" ng-hide="showStart">Button!</button>
+        <button class="btn" ng-click="numberZero()">0</button>
+        <button class="btn" ng-click="numberOne()">1</button>
+        <button class="btn" ng-click="numberTwo()">2</button>
+        <button class="btn" ng-click="numberThree()">3</button>
+        <button class="btn" ng-click="numberFour()">4</button>
+        <button class="btn" ng-click="numberFive()">5</button>
+        <button class="btn" ng-click="numberSix()">6</button>
+        <button class="btn" ng-click="numberSeven()">7</button>
+        <button class="btn" ng-click="numberEight()">8</button>
+        <button class="btn" ng-click="numberNine()">9</button>
+        <button class="btn" ng-click="deleteNumber()">-</button>
+        <button class="btn" ng-click="clearNumber()">Clear</button>
     </div>
 </div>
