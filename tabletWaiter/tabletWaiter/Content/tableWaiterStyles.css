@@ -174,7 +174,7 @@ textarea {
 .cart .numberOfItems {
   margin-bottom: 15px;
   text-align: right;
-  margin-right: -15 PX;
+  margin-right: -15PX;
 }
 .cart .cartPreview {
   margin-bottom: 10px;
@@ -232,6 +232,15 @@ textarea {
 .categories div {
   margin-left: 50px;
   text-align: left;
+}
+/*Order Summary of Client*/
+.orderSummary {
+  background-color: #F08080;
+  width: 50%;
+  padding: 20px;
+  margin: auto;
+  border: 1px solid #000;
+  border-radius: 20px;
 }
 /*Start Screen*/
 .startButton {

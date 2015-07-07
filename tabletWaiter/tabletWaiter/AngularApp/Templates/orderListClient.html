@@ -1,13 +1,18 @@
 ﻿<div ng-controller="orderListClientController">
     <h2>Order Summary:</h2>
 
-    <div class="numberOfItems">{{numberOfItems}} items</div>
-    <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem.price, $index)">
-        {{cartItem.name}} <span>x 1</span>
+    <div class="orderSummary">
+        <span>Table No.: {{tableNumber}}</span>
+        <div class="numberOfItems">Total: {{numberOfItems}} items</div>
+        <hr />
+        <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem.price, $index)">
+            {{cartItem.name}} <span>x 1</span>
+        </div>
+        <div class="orderInfo">
+            <span>Total</span><span>{{totalPrice}} €</span>
+        </div>
+        <br />
+        <div ng-click="sendOrders()"><button class="btn btn-lg btn-block btn-success">Order Now</button></div>
     </div>
-    <div class="orderInfo">
-        <span>Total</span><span>{{totalPrice}} €</span>
-    </div>
-
-    <div ng-click="sendOrders()"><button class="btn">Order Now</button></div>
+    
 </div>

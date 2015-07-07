@@ -4,7 +4,7 @@
     $scope.itemsCount;
     $scope.categories;
     $scope.loading = true;
-    
+    $scope.tableNumber = window.sessionStorage.tableNumber;
 
     $scope.sendOrders = function () {
         dataService.sendOrders($scope.cart)
