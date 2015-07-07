@@ -214,13 +214,23 @@ input[type="text"], textarea {
     .cartPreview {
         margin-bottom: 10px;
 
-        div {
+        .cartItem {
             margin: 5px 0;
             text-align: left;
 
-            span {
-                float: right;
+            img {
+                width: 30px;
+                margin-right: 15px;
+                vertical-align: middle;
+            }
+
+            .itemName {
+                vertical-align: middle;
+            }
+
+            .itemQuantity {
                 margin-left: 20px;
+                vertical-align: middle;
             }
         }
     }
@@ -237,6 +247,8 @@ input[type="text"], textarea {
         }
     }
 }
+
+
 
 .categoryFilter {
     margin: 5px;
@@ -323,7 +335,7 @@ input[type="text"], textarea {
 }
 
 /*Order Summary of Client*/
-.orderSummary{
+.orderSummary {
     background-color: #F08080;
     width: 50%;
     padding: 20px;

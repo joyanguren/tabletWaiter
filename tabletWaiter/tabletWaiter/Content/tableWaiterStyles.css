@@ -179,13 +179,21 @@ textarea {
 .cart .cartPreview {
   margin-bottom: 10px;
 }
-.cart .cartPreview div {
+.cart .cartPreview .cartItem {
   margin: 5px 0;
   text-align: left;
 }
-.cart .cartPreview div span {
-  float: right;
+.cart .cartPreview .cartItem img {
+  width: 30px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.cart .cartPreview .cartItem .itemName {
+  vertical-align: middle;
+}
+.cart .cartPreview .cartItem .itemQuantity {
   margin-left: 20px;
+  vertical-align: middle;
 }
 .cart .orderInfo {
   margin-top: 20px;

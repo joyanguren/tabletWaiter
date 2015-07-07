@@ -29,9 +29,9 @@
         <div>Table: {{tableNumber}}</div>
         <div class="numberOfItems">{{numberOfItems}} items</div>
         <div class="cartPreview">
-            <div ng-repeat="cartItem in cart track by $index" ng-click="deleteItem(cartItem.price, $index)">
-                {{cartItem.name}} <span>x 1</span>
-            </div>
+            <div ng-repeat="cartItem in cart track by $index" class="cartItem">
+                <img ng-click="deleteItem(cartItem.price, $index)" src="../../Content/images/eliminar.png" /> <span class="itemName">{{cartItem.name}}</span> <span class ="itemQuantity">x 1</spanclass>
+</div>
         </div>
         <hr />
         <div class="orderInfo">
