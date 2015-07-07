@@ -1,7 +1,5 @@
 ﻿<div ng-controller="setupScreenController">
-    <ul class="rainbowList">
-        <li><a class="btn" ng-click="hideStart()" ng-show="showStart"><span>START!</span></a></li>
-    </ul>
+    <button class="startButton" ng-click="hideStart()" ng-show="showStart">START!</button>
     <div ng-hide="showStart">
         Table Number: <input type="text" ng-model="tableNumber" />
 

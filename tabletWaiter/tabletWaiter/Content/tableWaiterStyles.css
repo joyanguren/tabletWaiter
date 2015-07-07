@@ -233,4 +233,35 @@ textarea {
   margin-left: 50px;
   text-align: left;
 }
+/*Start Screen*/
+.startButton {
+  background-color: purple;
+  border: 2px solid #bbb;
+  color: white;
+  font-size: 30px;
+  padding: 50px 45px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+/*Orders*/
+.order {
+  background-color: rebeccapurple;
+  padding: 20px;
+  margin: 20px;
+}
+/*Alerts*/
+.alert {
+  background: purple;
+  text-align: left;
+  padding-left: 60px;
+}
+.alert img {
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.alert span {
+  vertical-align: middle;
+}
 /*# sourceMappingURL=tableWaiterStyles.css.map */

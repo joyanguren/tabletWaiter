@@ -289,8 +289,11 @@
     <Content Include="Content\icons\addImage.png" />
     <Content Include="Content\icons\delete.png" />
     <Content Include="Content\icons\edit.png" />
+    <Content Include="Content\images\alert.png" />
+    <Content Include="Content\images\eliminar.png" />
     <Content Include="Content\images\loading.gif" />
     <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\tick.png" />
     <Content Include="Content\js\css3-mediaqueries.js" />
     <Content Include="Content\js\cufon-replace.js" />
     <Content Include="Content\js\cufon-yui.js" />
