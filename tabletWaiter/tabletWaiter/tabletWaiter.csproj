@@ -307,12 +307,6 @@
     <Content Include="Content\js\responsiveslides.js" />
     <Content Include="Content\js\roundabout.js" />
     <Content Include="Content\js\roundabout_shapes.js" />
-    <Content Include="Content\tableWaiterStyles.css">
-      <DependentUpon>tableWaiterStyles.less</DependentUpon>
-    </Content>
-    <Content Include="Content\tableWaiterStyles.min.css">
-      <DependentUpon>tableWaiterStyles.css</DependentUpon>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -375,9 +369,6 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Content\tableWaiterStyles.less" />
     <Content Include="package.json" />
-    <Content Include="Content\tableWaiterStyles.css.map">
-      <DependentUpon>tableWaiterStyles.css</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
