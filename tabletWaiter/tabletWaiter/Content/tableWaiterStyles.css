@@ -7,6 +7,16 @@ h3,
 h4 {
   color: white;
 }
+.importantText {
+  font-size: 18px;
+  font-weight: bold;
+}
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #84C21C;
+  margin-bottom: 3px;
+}
 #main {
   text-align: center;
   width: 960px;
@@ -128,17 +138,15 @@ textarea {
   padding: 20px;
   margin: 20px;
   overflow: hidden;
+  font-size: 18px;
+  font-weight: bold;
+  color: #84C21C;
+  margin-bottom: 3px;
 }
 .item img {
   float: left;
   margin-right: 30px;
   width: 300px;
-}
-.item .name {
-  font-size: 18px;
-  font-weight: bold;
-  color: #84C21C;
-  margin-bottom: 3px;
 }
 .item p {
   margin-top: 10px;
@@ -258,16 +266,62 @@ textarea {
   padding: 4px;
 }
 /*Orders*/
-.order {
-  background-color: rebeccapurple;
+.orders {
+  border: 2px solid black;
+  background: white;
+  color: black;
+  text-align: left;
   padding: 20px;
   margin: 20px;
+  overflow: hidden;
+}
+.orders span {
+  float: right;
+  margin-bottom: 15px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+.orders table {
+  width: 100%;
+  margin-top: 20px;
+}
+.orders .itemOrdered {
+  vertical-align: middle;
+  border-bottom: 1px solid gray;
+}
+.orders .itemOrdered td {
+  padding: 5px;
+}
+.orders .itemOrdered td:nth-child(1) {
+  font-size: 18px;
+  font-weight: bold;
+  color: darkorange;
+  padding-left: 10px;
+}
+.orders .itemOrdered td:nth-child(2) {
+  font-size: 18px;
+  font-weight: bold;
+  color: #84C21C;
+  margin-bottom: 3px;
+  text-align: center;
+}
+.orders .itemOrdered td:nth-child(3) {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0094ff;
+  text-align: right;
+  padding-right: 40px;
 }
 /*Alerts*/
 .alert {
   background: purple;
   text-align: left;
   padding-left: 60px;
+  width: 275px;
+  margin: 20px auto;
 }
 .alert img {
   width: 40px;
@@ -280,8 +334,55 @@ textarea {
 /*Order Summary of Client*/
 .orderSummary {
   width: 50%;
+  border: 2px solid black;
+  background: white;
+  color: black;
+  text-align: center;
   padding: 20px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+.orderSummary .numberOfItems {
+  float: left;
+  margin-top: -5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: darkorange;
+}
+.orderSummary .orderItems {
+  margin: 20px auto;
+  width: 80%;
+  margin-top: 35px;
+}
+.orderSummary .orderItems .orderItem {
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+  text-align: left;
+  vertical-align: middle;
+}
+.orderSummary .orderItems .orderItem td {
+  padding: 3px;
+}
+.orderSummary .orderItems .orderItem td img {
+  width: 40px;
+}
+.orderSummary hr {
+  height: 1px;
+  background-color: #888;
+  width: 80%;
+}
+.orderSummary .orderInfo {
+  font-size: 18px;
+  font-weight: bold;
+  color: purple;
+  text-align: right;
+  width: 80%;
   margin: auto;
+}
+.orderSummary button {
+  margin: auto;
+  width: 80%;
 }
 /*Table Number*/
 .showTableNumber {

@@ -5,12 +5,17 @@
         <img src="../../Content/images/loading.gif" />
     </div>
 
-    <div class="order" ng-repeat="order in orders">
+    <div class="orders" ng-repeat="order in orders">
         <span>{{order.TableNumber}}</span>
-        <div ng-repeat="itemOrdered in order.ItemsOrdered">
-            <div>
-                {{itemOrdered.itemId}} - {{itemOrdered.name}} - {{itemOrdered.price}} €
-            </div>
-        </div>
+        <table>
+            <tr ng-repeat="itemOrdered in order.ItemsOrdered" class="itemOrdered">
+                <td>{{itemOrdered.itemId}}</td>
+                <td>{{itemOrdered.name}}</td>
+                <td>{{itemOrdered.price}} €</td>
+                <td><button class="btn btn-info btn-block">Start!</button></td>
+                <td><button class="btn btn-danger btn-block">Delete!</button></td>
+            </tr>
+        </table>
+
     </div>
 </div>

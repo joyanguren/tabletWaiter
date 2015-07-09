@@ -29,6 +29,10 @@
         cartService.deleteCart(price, index);
 
         updateCartData();
+
+        if (parseInt($scope.numberOfItems) == 0) {
+            $location.path('/itemListClient');
+        }
     }
 
 
