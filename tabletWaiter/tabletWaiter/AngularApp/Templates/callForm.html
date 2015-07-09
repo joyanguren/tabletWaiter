@@ -1,7 +1,10 @@
 ﻿<div ng-controller="callFormController">
     <h2>Call Form</h2>
+    <div class="overlay" ng-show="showOverlay">
+        <img src="../../Content/images/loading.gif" />
+    </div>
     <ul class="rainbowList">
         <li><a class="btn" href=""><span>More drinks</span></a></li>
-        <li><a class="btn" href="" ng-click="simpleAlert()"><span>Need help</span></a></li>
+        <li><a class="btn" href="" ng-click="simpleAlert()" ng-hide="showOverlay"><span>Need help</span></a></li>
     </ul>
 </div>

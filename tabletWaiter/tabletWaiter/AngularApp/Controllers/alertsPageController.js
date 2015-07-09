@@ -4,5 +4,6 @@
     dataService.getAlerts()
     .success(function (result) {
         $scope.alerts = result;
+
     })
 }]);
