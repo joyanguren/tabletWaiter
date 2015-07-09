@@ -4,6 +4,7 @@
     $scope.itemsCount;
     $scope.categories;
     $scope.loading = true;
+    $scope.showOverlay = false;
 
     dataService.getCategories().then(function (result) {
         $scope.categories = result.data;
@@ -43,6 +44,7 @@
     };
 
     $scope.filterCategory = function (categoryId) {
+        $scope.showOverlay = true;
         $scope.loading = true;
         $scope.items = [];
 
@@ -50,6 +52,7 @@
             $scope.items = allItems;
             $scope.itemsCount = $scope.items.length;
             $scope.loading = false;
+            $scope.showOverlay = false;
             return;
         }
 
@@ -61,6 +64,7 @@
 
         $scope.itemsCount = $scope.items.length;
         $scope.loading = false;
+        $scope.showOverlay = false;
     };
 
     $scope.showItem = function (itemId, index)
