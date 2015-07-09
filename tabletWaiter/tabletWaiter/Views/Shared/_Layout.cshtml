@@ -22,7 +22,7 @@
     <section id="main">
         @RenderBody()
         <div ng-controller="indexController">
-            <div class="showTableNumber">
+            <div class="showTableNumber" ng-hide="!tableNumber">
                 Table No.: {{tableNumber}}
             </div>
         </div>
