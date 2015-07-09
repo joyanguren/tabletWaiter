@@ -269,6 +269,7 @@
     <Content Include="AngularApp\Templates\categoryList.html" />
     <Content Include="AngularApp\Templates\editItem.html" />
     <Content Include="AngularApp\Templates\addItem.html" />
+    <Content Include="AngularApp\Templates\help.html" />
     <Content Include="AngularApp\Templates\index.html" />
     <Content Include="AngularApp\Templates\itemList.html" />
     <Content Include="AngularApp\Templates\itemListClient.html" />
@@ -308,8 +309,10 @@
     <Content Include="Content\images\keypad\8.png" />
     <Content Include="Content\images\keypad\9.png" />
     <Content Include="Content\images\keypad\cancel.png" />
+    <Content Include="Content\images\keypad\loading2.GIF" />
     <Content Include="Content\images\keypad\ok.png" />
     <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\loading2.GIF" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\tick.png" />
     <Content Include="Content\js\css3-mediaqueries.js" />

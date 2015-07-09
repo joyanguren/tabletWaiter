@@ -5,6 +5,7 @@
         <img src="../../Content/images/loading.gif" />
     </div>
 
+    <div class="overlay" ng-show="showOverlay"><img src="../../Content/images/loading2.gif" /></div>
     <div class="item" ng-hide="loading">
         <span ng-repeat="category in categories" class="categoryFilter" ng-click="filterCategory(category.Id)">{{ category.Name }}</span>
         <span class="categoryFilter" ng-click="filterCategory(-1)">Todos</span>
