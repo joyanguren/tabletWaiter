@@ -276,12 +276,6 @@
     <Content Include="AngularApp\Templates\orderList.html" />
     <Content Include="AngularApp\Templates\orderListClient.html" />
     <Content Include="AngularApp\Templates\setupScreen.html" />
-    <Content Include="AngularApp\Templates\tableWaiterStyles.css">
-      <DependentUpon>tableWaiterStyles.less</DependentUpon>
-    </Content>
-    <Content Include="AngularApp\Templates\tableWaiterStyles.min.css">
-      <DependentUpon>tableWaiterStyles.css</DependentUpon>
-    </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -395,10 +389,6 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="package.json" />
-    <Content Include="AngularApp\Templates\tableWaiterStyles.less" />
-    <Content Include="AngularApp\Templates\tableWaiterStyles.css.map">
-      <DependentUpon>tableWaiterStyles.css</DependentUpon>
-    </Content>
     <Content Include="Content\tableWaiterStyles.css.map">
       <DependentUpon>tableWaiterStyles.css</DependentUpon>
     </Content>
